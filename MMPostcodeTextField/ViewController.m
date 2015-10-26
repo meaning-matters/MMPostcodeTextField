@@ -7,21 +7,32 @@
 //
 
 #import "ViewController.h"
+#import "MMPostcodeTextFieldFormatter.h"
 
-@interface ViewController ()
+
+@interface ViewController () <UITextFieldDelegate>
+
+@property (nonatomic, weak) IBOutlet UITextField*           textField;
+@property (nonatomic, strong) MMPostcodeTextFieldFormatter* textFieldFormatter;
 
 @end
 
+
 @implementation ViewController
 
-- (void)viewDidLoad {
+- (void)viewDidLoad
+{
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    self.textFieldFormatter = [[MMPostcodeTextFieldFormatter alloc] initWithTextField:self.textField];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+
+#pragma mark - TextField Delegate
+
+- (BOOL)textField:(UITextField*)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString*)string
+{
+    return [self.textFieldFormatter shouldChangeText:string inRange:range];
 }
 
 @end

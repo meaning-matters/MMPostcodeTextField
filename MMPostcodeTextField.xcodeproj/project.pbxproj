@@ -15,6 +15,9 @@
 		48DD3BFF1BDED312006F7F01 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48DD3BFD1BDED312006F7F01 /* LaunchScreen.storyboard */; };
 		48DD3C0A1BDED312006F7F01 /* MMPostcodeTextFieldTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48DD3C091BDED312006F7F01 /* MMPostcodeTextFieldTests.m */; };
 		48DD3C151BDED312006F7F01 /* MMPostcodeTextFieldUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 48DD3C141BDED312006F7F01 /* MMPostcodeTextFieldUITests.m */; };
+		48DD3C281BDED3AB006F7F01 /* MMPostcodeTextFieldFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 48DD3C241BDED3AB006F7F01 /* MMPostcodeTextFieldFormatter.m */; settings = {ASSET_TAGS = (); }; };
+		48DD3C291BDED3AB006F7F01 /* OutwardCodes.json in Resources */ = {isa = PBXBuildFile; fileRef = 48DD3C251BDED3AB006F7F01 /* OutwardCodes.json */; settings = {ASSET_TAGS = (); }; };
+		48DD3C2A1BDED3AB006F7F01 /* UIView+MM.m in Sources */ = {isa = PBXBuildFile; fileRef = 48DD3C271BDED3AB006F7F01 /* UIView+MM.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,11 @@
 		48DD3C101BDED312006F7F01 /* MMPostcodeTextFieldUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MMPostcodeTextFieldUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		48DD3C141BDED312006F7F01 /* MMPostcodeTextFieldUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MMPostcodeTextFieldUITests.m; sourceTree = "<group>"; };
 		48DD3C161BDED312006F7F01 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48DD3C231BDED3AB006F7F01 /* MMPostcodeTextFieldFormatter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMPostcodeTextFieldFormatter.h; sourceTree = "<group>"; };
+		48DD3C241BDED3AB006F7F01 /* MMPostcodeTextFieldFormatter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMPostcodeTextFieldFormatter.m; sourceTree = "<group>"; };
+		48DD3C251BDED3AB006F7F01 /* OutwardCodes.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = OutwardCodes.json; sourceTree = "<group>"; };
+		48DD3C261BDED3AB006F7F01 /* UIView+MM.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+MM.h"; sourceTree = "<group>"; };
+		48DD3C271BDED3AB006F7F01 /* UIView+MM.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+MM.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +109,7 @@
 		48DD3BEE1BDED312006F7F01 /* MMPostcodeTextField */ = {
 			isa = PBXGroup;
 			children = (
+				48DD3C221BDED3AB006F7F01 /* src */,
 				48DD3BF21BDED312006F7F01 /* AppDelegate.h */,
 				48DD3BF31BDED312006F7F01 /* AppDelegate.m */,
 				48DD3BF51BDED312006F7F01 /* ViewController.h */,
@@ -139,6 +148,18 @@
 			);
 			path = MMPostcodeTextFieldUITests;
 			sourceTree = "<group>";
+		};
+		48DD3C221BDED3AB006F7F01 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				48DD3C231BDED3AB006F7F01 /* MMPostcodeTextFieldFormatter.h */,
+				48DD3C241BDED3AB006F7F01 /* MMPostcodeTextFieldFormatter.m */,
+				48DD3C251BDED3AB006F7F01 /* OutwardCodes.json */,
+				48DD3C261BDED3AB006F7F01 /* UIView+MM.h */,
+				48DD3C271BDED3AB006F7F01 /* UIView+MM.m */,
+			);
+			path = src;
+			sourceTree = SOURCE_ROOT;
 		};
 /* End PBXGroup section */
 
@@ -244,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48DD3BFF1BDED312006F7F01 /* LaunchScreen.storyboard in Resources */,
+				48DD3C291BDED3AB006F7F01 /* OutwardCodes.json in Resources */,
 				48DD3BFC1BDED312006F7F01 /* Assets.xcassets in Resources */,
 				48DD3BFA1BDED312006F7F01 /* Main.storyboard in Resources */,
 			);
@@ -271,7 +293,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				48DD3BF71BDED312006F7F01 /* ViewController.m in Sources */,
+				48DD3C281BDED3AB006F7F01 /* MMPostcodeTextFieldFormatter.m in Sources */,
 				48DD3BF41BDED312006F7F01 /* AppDelegate.m in Sources */,
+				48DD3C2A1BDED3AB006F7F01 /* UIView+MM.m in Sources */,
 				48DD3BF11BDED312006F7F01 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
